@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+<title>Bike King </title>
+
+<link rel="stylesheet" href="screen.css" media="screen">
+
+<style media="screen">
+* {
+    padding: 0;
+    margin: 0;
+ }
+
+body {
+    background-color: #f0f0f0;
+    font: 100%/160% verdana, arial, helvetica, sans-serif;
+ }
+
+#header {
+    padding:0.75em 1em;
+    background-color: #000;
+    text-align: center;
+    color:#fff;
+ }
+
+#header a {
+    float: left;
+    color: #fff;
+    text-decoration: none;
+ }
+
+#header a:hover  {
+    color: #fcab15;
+ }
+
+#header div:first-of-type {
+    float: right;
+ }
+
+#header div:last-of-type {
+    display: inline-block;
+ }
+
+#header div:last-of-type span {
+    margin-left: 0.5em;
+    color: #fcab15;
+ }
+
+#form-container {
+    padding: 0.75em 1em;
+	background-color: #065671;
+    text-align: center;
+ }
+
+#form-container label {
+    margin: 0 0.5em;
+    color: #fff;
+ }
+
+#form-container img, 
+#form-container form {
+    display: inline-block;
+    vertical-align: middle;;
+ }
+
+#form-container form input[type="text"] {
+    line-height: 2.5em;
+    font-size: 1em;
+ }
+
+#form-container form input[type="submit"] {
+	border-color: #008000;
+	border-style: outset;
+	background-color: #008000;
+    line-height: 2.5em;
+    font-size: 1em;
+ }
+
+@media ( max-width:50em ) {
+
+#header a,
+#header div:first-of-type, 
+#header div:last-of-type  {
+    float: none;
+    display: block;
+  }
+
+ }
+
+@media ( max-width:37.5em ) {
+
+#form-container img {
+    display: block;
+    margin: auto;
+ }
+
+#form-container label {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+ }
+</style>
+
+</head>
+<body> 
+
+ <div id="header">
+  <a href="index.html"> Sign in/Register</a> 
+  <div>Need Help? : 02080207651</div>
+  <div>FREE  International shipping on<span>Selected Items</span></div>
+ <!-- #header --></div>
+
+ <div id="form-container">
+  <img src="http://placehold.it/162x100" alt="logo">
+  <form action="#">
+   <label for="textbox">Enter Search Item</label>
+   <input type="text" id="textbox" name="textbox" required placeholder="Search Bike King...">
+   <input type="submit" value="Search">
+  </form>  
+ <!-- #form-container --></div>
+
+</body>
+</html>
