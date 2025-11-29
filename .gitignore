@@ -45,3 +45,9 @@ Desktop.ini
 .project
 .classpath
 .settings/
+
+# Tool/IDE specific
+.kiro/
+
+# AI/Session logs
+gemini-conversation-*.json
