@@ -18,7 +18,7 @@ To build and run the 11ty project locally, the following command is typically us
 ```bash
 npx @11ty/eleventy --serve
 ```
-*(Note: This command assumes the 11ty project is set up in a `src` directory as outlined in the `Structure and Architecture Plan.md` and `package.json` is configured with 11ty dependencies.)*
+*(Note: This command assumes the 11ty project is set up in a `src` directory as outlined in the `docs/Structure and Architecture Plan.md` and `package.json` is configured with 11ty dependencies.)*
 
 ## Development Conventions:
 
@@ -36,7 +36,9 @@ npx @11ty/eleventy --serve
 The planned folder structure is detailed in `Structure and Architecture Plan.md`, with `src/` as the main source directory containing `_data/`, `_includes/`, `pages/`, `projects/`, `posts/`, and `assets/`.
 
 ## Key Files in this Directory:
-*   **`Component Library Specification.md`**: Details the individual UI components, their purpose, structure, and styling.
-*   **`Design System and Theme Specification.md`**: Outlines the design philosophy, color palette, typography, layout system, and component styling.
-*   **`Product Requirements Document.md`**: Provides an overview of the project's purpose, objectives, target audience, scope, key features, and non-functional requirements.
-*   **`Structure and Architecture Plan.md`**: Describes the 11ty project's folder structure, content architecture, layout architecture, data-driven sections, styling system, and build/deployment processes.
+*   **`docs/Component Library Specification.md`**: Details the individual UI components, their purpose, structure, and styling.
+*   **`docs/Design System and Theme Specification.md`**: Outlines the design philosophy, color palette, typography, layout system, and component styling.
+*   **`docs/Product Requirements Document.md`**: Provides an overview of the project's purpose, objectives, target audience, scope, key features, and non-functional requirements.
+*   **`docs/Structure and Architecture Plan.md`**: Describes the 11ty project's folder structure, content architecture, layout architecture, data-driven sections, styling system, and build/deployment processes.
+*   **`docs/DEPLOYMENT.md`**: Comprehensive guide for deploying and publishing the project.
+*   **`docs/Project Overview.md`**: High-level overview of the project goals and scope.
