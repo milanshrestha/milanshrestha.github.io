@@ -1,0 +1,59 @@
+/* Color Palette */
+$color-primary-blue: #1A73E8;
+$color-primary-blue-dark: #185ABC;
+$color-charcoal: #202124;
+$color-white: #FFFFFF;
+$color-light-gray: #F8F9FA;
+$color-sky-blue: #E8F0FE;
+$color-error: #D93025;
+$color-regal-gold: #C6A664;
+$spacing-unit: 1rem; // Define Sass variable here globally
+
+:root {
+  --color-primary-blue: #1A73E8;
+  --color-primary-blue-dark: #185ABC;
+  --color-charcoal: #202124;
+  --color-white: #FFFFFF;
+  --color-light-gray: #F8F9FA;
+  --color-border: #e0e0e0;
+  --color-sky-blue: #E8F0FE;
+  --color-sky-gradient-start: #87CEEB;
+  --color-sky-gradient-end: #f0f9ff;
+  --color-error: #D93025;
+  --color-regal-gold: #C6A664;
+
+  /* Typography */
+  --font-heading: "Google Sans", sans-serif;
+  --font-body: "EB Garamond", serif;
+  --font-ui: "Roboto", sans-serif;
+
+  --font-size-h1: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 18px;
+  --font-size-body: 18px;
+  --font-size-small: 14px;
+  --font-size-button: 16px;
+
+  --font-weight-h1: 700;
+  --font-weight-h2: 500;
+  --font-weight-h3: 500;
+  --font-weight-h4: 500;
+  --font-weight-body: 400;
+  --font-weight-small: 400;
+  --font-weight-button: 500;
+
+  --letter-spacing-h1: -1px;
+  --letter-spacing-h2: -0.5px;
+  --letter-spacing-h3: 0;
+  --letter-spacing-body: 0;
+  --letter-spacing-small: 0.2px;
+  --letter-spacing-button: 0.3px;
+
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  /* Spacing */
+  --spacing-unit: #{$spacing-unit}; /* CSS Custom Property using Sass variable */
+
+}

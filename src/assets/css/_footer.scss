@@ -1,0 +1,67 @@
+.site-footer {
+  background-color: var(--color-white);
+  padding: var(--spacing-unit) 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  /* Subtle top shadow */
+
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+}
+
+.site-footer p {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-small);
+  color: var(--color-charcoal);
+  margin: 0;
+  /* Remove default paragraph margin */
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .social-icon {
+      width: 32px;
+      /* Set desired width */
+      height: 32px;
+      /* Set desired height */
+      vertical-align: middle;
+      /* Align with text if any */
+      background-color: var(--color-primary-blue);
+      /* Apply brand color */
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+    }
+  }
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+  .footer__inner {
+    flex-direction: column;
+    /* Stack items vertically */
+    text-align: center;
+  }
+
+  .site-footer p {
+    margin-bottom: var(--spacing-unit);
+    /* Space between text and socials */
+  }
+}

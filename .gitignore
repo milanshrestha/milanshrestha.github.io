@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Eleventy/Build artifacts
+dist/
+
+# Logs and temporary files
+error.log
+*.log
+log/
+Console Error/
+Console Error Log/
+Runtime Error Log/
+Runtime Output/
+Runtime Output Log/
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+*~

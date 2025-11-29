@@ -1,0 +1,17 @@
+{
+  "title": "Milan Shrestha",
+  "subtitle": "IT Manager — Hotel Shanker Kathmandu",
+  "description": "Personal portfolio of Milan Shrestha, IT Manager at Hotel Shanker, Kathmandu — bridging heritage hospitality with modern technology.",
+  "url": "https://milan-shrestha.com",
+  "author": "Milan Shrestha",
+  "hero_title": "Bridging heritage hospitality with modern technology.",
+  "subtitle_full": "IT Manager at Hotel Shanker, Kathmandu",
+  "author_image": "/assets/img/Milan-Shrestha-Ghibli.png",
+  "logo_initials": "MS",
+  "email": "milan@example.com",
+  "footer_cta": {
+    "title": "Get in Touch",
+    "text": "Have a project in mind or want to connect? I'd be happy to hear from you.",
+    "button_text": "Let's Talk"
+  }
+}

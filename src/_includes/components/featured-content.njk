@@ -1,0 +1,17 @@
+<section class="featured-content">
+  <div class="container">
+    <h2 class="section-title">Featured Contents</h2>
+    <p class="section-subtitle">Highlighting key services that IT overlooks in hotels.</p>
+    <div class="featured-grid">
+      {% for item in featured %}
+        <div class="featured-card">
+          <div class="featured-card__header">
+            <div class="featured-card__icon" style="-webkit-mask-image: url('/assets/img/icons/{{ item.icon }}.svg'); mask-image: url('/assets/img/icons/{{ item.icon }}.svg');"></div>
+            <h3 class="featured-card__title">{{ item.title }}</h3>
+          </div>
+          <p class="featured-card__description">{{ item.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

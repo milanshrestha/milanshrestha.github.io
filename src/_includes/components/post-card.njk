@@ -1,0 +1,14 @@
+<article class="post-card">
+  <a href="{{ post.url }}" class="post-card__link">
+    {% if post.data.image %}
+      <img src="{{ post.data.image }}" alt="{{ post.data.title }}" class="post-card__image">
+    {% endif %}
+    <div class="post-card__content">
+      <h3 class="post-card__title">{{ post.data.title }}</h3>
+      {% if post.data.description %}
+        <p class="post-card__description">{{ post.data.description }}</p>
+      {% endif %}
+      <time datetime="{{ post.date | date('YYYY-MM-DD') }}" class="post-card__date">{{ post.date | date("MMMM D, YYYY") }}</time>
+    </div>
+  </a>
+</article>

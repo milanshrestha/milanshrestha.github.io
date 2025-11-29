@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-image" aria-label="{{ site.title }} Logo">
+        <circle cx="20" cy="20" r="20" fill="currentColor"/>
+        <text x="50%" y="50%" dy="6" text-anchor="middle" font-family="'Google Sans', sans-serif" font-weight="bold" font-size="20" class="svg-text-fill">{{ site.logo_initials }}</text>
+      </svg>
+      <div class="logo-text-wrapper">
+        <span class="logo-text">{{ site.title }}</span>
+        <span class="logo-sub">{{ site.subtitle }}</span>
+      </div>
+    </a>
+
+    <nav class="header__nav">
+      {% for item in nav %}
+        <a href="{{ item.url }}" class="nav__link{% if page.url == item.url %} active{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <button class="hamburger-icon" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>

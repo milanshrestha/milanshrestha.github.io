@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <p>© {{ site.title }} — {{ site.subtitle }}</p>
+    <div class="footer__socials">
+      {% for social in socials %}
+        <a href="{{ social.url }}" title="{{ social.title }}" target="_blank">
+          <div class="social-icon" style="-webkit-mask-image: url('/assets/img/icons/{{ social.icon }}.svg'); mask-image: url('/assets/img/icons/{{ social.icon }}.svg');" aria-label="{{ social.title }} icon"></div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>

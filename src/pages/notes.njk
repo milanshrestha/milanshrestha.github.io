@@ -1,0 +1,17 @@
+---
+layout: layouts/page.njk
+title: Notes
+description: Milan Shrestha's technical notes and insights.
+permalink: /notes/
+---
+
+<section class="blog-list">
+  <div class="container">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="card-grid">
+      {% for post in collections.posts | reverse %}
+        {% include "components/post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

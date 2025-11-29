@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+      "Context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp", "--api-key", "ctx7sk-1b1afbd3-f7a7-494a-be46-e853a925cac7"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": []
+    },
+      "octocode": {
+      "command": "npx",
+      "args": ["octocode-mcp@latest"]
+    },
+      "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}

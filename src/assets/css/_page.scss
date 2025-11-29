@@ -1,0 +1,40 @@
+@use 'variables';
+
+.page-article {
+    padding-top: variables.$spacing-unit * 4;
+    padding-bottom: variables.$spacing-unit * 4;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: variables.$spacing-unit * 4;
+    background-color: variables.$color-white;
+
+    .page-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-h1);
+        font-weight: var(--font-weight-h1);
+        letter-spacing: var(--letter-spacing-h1);
+        color: var(--color-primary-blue);
+        margin-bottom: variables.$spacing-unit;
+        line-height: var(--line-height-heading);
+    }
+
+    .page-description {
+        font-family: var(--font-body);
+        font-size: var(--font-size-h3);
+        color: #5f6368;
+        line-height: var(--line-height-body);
+        max-width: 65ch;
+        margin: 0 auto;
+    }
+}
+
+.page-content {
+    // Inherit base styles, but allow full width for containers inside (like .blog-list)
+    width: 100%;
+
+    // If the page content is just text, we might want to constrain it, 
+    // but for pages like 'Notes' which have full-width sections, we shouldn't constrain the root .page-content too much.
+    // Instead, we rely on inner .container classes.
+}

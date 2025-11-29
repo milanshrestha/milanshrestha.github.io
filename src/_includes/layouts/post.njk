@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+<article class="post-article">
+  <div class="container post-header">
+    {% if image %}
+      <img src="{{ image }}" alt="{{ title }}" class="post-feature-image">
+    {% endif %}
+    <h1 class="post-title">{{ title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ date | htmlDateString }}">{{ date | date("MMMM D, YYYY") }}</time>
+      {% if tags %}
+        {% for tag in tags %}
+          <span class="post-tag">{{ tag }}</span>
+        {% endfor %}
+      {% endif %}
+    </p>
+    {% if description %}
+      <p class="post-description">{{ description }}</p>
+    {% endif %}
+  </div>
+
+  <div class="container post-content">
+    {{ content | safe }}
+  </div>
+</article>

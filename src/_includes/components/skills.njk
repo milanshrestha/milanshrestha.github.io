@@ -1,0 +1,17 @@
+<section class="skills">
+  <div class="container">
+    <h2 class="section-title">Skills & Technologies</h2>
+    <p class="section-subtitle">Key areas of expertise and technical proficiencies.</p>
+
+    <div class="skills-grid">
+      {% for skill in skills %}
+        <div class="skill-card">
+          <div class="skill-card__header">
+            <div class="skill-card__icon" style="-webkit-mask-image: url('/assets/img/icons/{{ skill.icon }}.svg'); mask-image: url('/assets/img/icons/{{ skill.icon }}.svg');" aria-label="{{ skill.name }} icon"></div>
+            <h3 class="skill-card__title">{{ skill.name }}</h3>
+          </div>
+          <p class="skill-card__description">{{ skill.description }}</p>
+        </div>
+      {% endfor %}
+    </div>  </div>
+</section>
