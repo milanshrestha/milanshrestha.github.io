@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
 
   eleventyConfig.addCollection("posts", (collection) => {
