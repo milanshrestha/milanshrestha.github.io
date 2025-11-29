@@ -1,0 +1,265 @@
+@use 'variables';
+
+.blog-list {
+  padding: variables.$spacing-unit * 4 0;
+  background-color: var(--color-light-gray);
+  text-align: center;
+
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-unit * 2;
+    margin-top: variables.$spacing-unit * 3;
+    // CSS Grid removed in favor of Flexbox per user request
+  }
+}
+
+.post-article {
+  padding: variables.$spacing-unit * 2 0;
+
+  .post-header {
+    text-align: center;
+    margin-bottom: variables.$spacing-unit * 4;
+    /* Increased spacing */
+    max-width: 100%;
+    /* Limit header width slightly more than content for focus */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post-feature-image {
+    width: 100%;
+    max-height: 600px;
+    /* Increased max-height */
+    object-fit: cover;
+    border-radius: 12px;
+    /* Slightly more rounded */
+    margin-bottom: variables.$spacing-unit * 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Added shadow */
+  }
+
+  .post-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
+    letter-spacing: var(--letter-spacing-h1);
+    color: var(--color-primary-blue);
+    /* Changed to Primary Blue */
+    margin-bottom: variables.$spacing-unit;
+    line-height: var(--line-height-heading);
+  }
+
+  .post-meta {
+    font-family: var(--font-ui);
+    font-size: var(--font-size-small);
+    color: var(--color-charcoal);
+    opacity: 0.8;
+    margin-bottom: variables.$spacing-unit * 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: variables.$spacing-unit;
+
+    .post-tag {
+      display: inline-block;
+      background-color: var(--color-sky-blue);
+      color: var(--color-primary-blue);
+      padding: 0.25rem 0.75rem;
+      /* Adjusted padding */
+      border-radius: 16px;
+      /* Pill shape */
+      font-weight: 500;
+      font-size: 0.9em;
+      margin-left: 0;
+      /* Removed margin-left in favor of gap */
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #d2e3fc;
+        /* Darker shade of #E8F0FE */
+      }
+    }
+  }
+
+  .post-description {
+    font-family: var(--font-body);
+    font-size: var(--font-size-h3);
+    /* Slightly larger for a lead-in description */
+    color: #5f6368;
+    /* Softer gray */
+    line-height: var(--line-height-body);
+    max-width: 75ch;
+    margin: 0 auto;
+  }
+
+  .post-content {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: 75ch;
+    /* Enforce optimal reading width */
+    margin-left: auto;
+    margin-right: auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-heading);
+      color: var(--color-primary-blue);
+      /* Changed to Primary Blue per spec */
+      margin-top: variables.$spacing-unit * 3;
+      /* Increased spacing */
+      margin-bottom: variables.$spacing-unit;
+      line-height: var(--line-height-heading);
+    }
+
+    h1 {
+      font-size: var(--font-size-h1);
+      font-weight: var(--font-weight-h1);
+      letter-spacing: var(--letter-spacing-h1);
+    }
+
+    h2 {
+      font-size: var(--font-size-h2);
+      font-weight: var(--font-weight-h2);
+      letter-spacing: var(--letter-spacing-h2);
+    }
+
+    h3 {
+      font-size: var(--font-size-h3);
+      font-weight: var(--font-weight-h3);
+      letter-spacing: var(--letter-spacing-h3);
+    }
+
+    h4 {
+      font-size: var(--font-size-h4);
+      font-weight: var(--font-weight-h4);
+    }
+
+    p {
+      margin-bottom: variables.$spacing-unit * 1.5;
+      /* Increased paragraph spacing */
+    }
+
+    a {
+      color: var(--color-primary-blue);
+      text-decoration: none;
+      /* No underline by default */
+      font-weight: 500;
+
+      &:hover {
+        color: var(--color-primary-blue-dark);
+        text-decoration: underline;
+        /* Underline on hover only */
+      }
+    }
+
+    ul,
+    ol {
+      margin-bottom: variables.$spacing-unit * 1.5;
+      padding-left: variables.$spacing-unit * 1.5;
+    }
+
+    li {
+      margin-bottom: variables.$spacing-unit * 0.5;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--color-primary-blue);
+      /* Thinner, blue border */
+      padding-left: variables.$spacing-unit;
+      margin-left: 0;
+      margin-right: 0;
+      font-style: italic;
+      color: #5f6368;
+      /* Soft gray per spec */
+      font-family: var(--font-body);
+    }
+
+    pre {
+      background-color: var(--color-light-gray);
+      padding: variables.$spacing-unit;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: variables.$spacing-unit * 1.5;
+    }
+
+    code {
+      font-family: monospace;
+      background-color: var(--color-light-gray);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      margin: variables.$spacing-unit * 2 0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: variables.$spacing-unit * 2;
+      font-size: 0.95em;
+    }
+
+    th,
+    td {
+      padding: variables.$spacing-unit * 0.75;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+    }
+
+    th {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--color-charcoal);
+      background-color: var(--color-light-gray);
+      border-bottom: 2px solid #dadce0;
+    }
+
+    /* Horizontal Rule */
+    hr {
+      border: 0;
+      border-top: 1px solid #dadce0;
+      margin: variables.$spacing-unit * 3 0;
+    }
+
+    /* Keyboard Input */
+    kbd {
+      font-family: monospace;
+      background-color: #f1f3f4;
+      border: 1px solid #dadce0;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      color: #3c4043;
+      display: inline-block;
+      font-size: 0.85em;
+      padding: 0 4px;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post-article {
+    .post-title {
+      font-size: var(--font-size-h2);
+    }
+
+    .post-description {
+      font-size: var(--font-size-body);
+    }
+  }
+}

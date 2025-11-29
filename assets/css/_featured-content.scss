@@ -1,0 +1,92 @@
+@use 'variables';
+
+.featured-content {
+  padding: variables.$spacing-unit * 4 0;
+  background-color: var(--color-light-gray);
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--font-size-h2);
+  color: var(--color-charcoal);
+  margin-bottom: variables.$spacing-unit;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-h3);
+  color: var(--color-charcoal);
+  margin-bottom: variables.$spacing-unit * 2;
+}
+
+.featured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: variables.$spacing-unit * 2;
+  margin-top: variables.$spacing-unit * 3;
+  justify-content: center;
+  /* Center cards if they don't fill the row */
+}
+
+.featured-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Subtle border */
+  padding: variables.$spacing-unit * 2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Existing shadow */
+  text-align: left;
+  display: flex;
+  /* Use flexbox for card content */
+  flex-direction: column;
+  /* Stack items vertically */
+  justify-content: space-between;
+  /* Push button to the bottom */
+  flex-basis: calc(25% - (variables.$spacing-unit * 2 * 3 / 4));
+  /* Aim for 4 columns, accounting for gap */
+  flex-grow: 1;
+  /* Allow cards to grow */
+  min-width: 280px;
+  /* Minimum width for a card */
+}
+
+.featured-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: variables.$spacing-unit;
+}
+
+.featured-card__icon {
+  width: 48px;
+  height: 48px;
+  margin-right: variables.$spacing-unit;
+  flex-shrink: 0;
+  /* Prevent the icon from shrinking */
+  background-color: var(--color-primary-blue);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.featured-card__title {
+  font-size: var(--font-size-h3);
+  color: var(--color-charcoal);
+  margin-bottom: 0;
+  /* Remove default margin */
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.featured-card__description {
+  font-size: var(--font-size-body);
+  color: var(--color-charcoal);
+  line-height: var(--line-height-body);
+  flex-grow: 1;
+  /* Allow description to grow and push button down */
+  margin-bottom: variables.$spacing-unit;
+  /* Space between description and button */
+}
